@@ -1,7 +1,6 @@
 {
   "name": "task1",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,6 +12,8 @@
     "@babel/cli": "^7.15.7",
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.6",
-    "core-js": "^3.18.1"
-  }
+    "core-js": "^3.18.1",
+    "corejs": "^1.0.0"
+  },
+  "description": ""
 }
