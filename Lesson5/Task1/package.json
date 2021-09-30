@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"webpack"
+    "build":"webpack ./src/my-index.js --mode=production ",
+    "watch":"webpack ./src/my-index.js --mode=development --devtool eval-source-map -w"
   },
   "author": "",
   "license": "ISC",
