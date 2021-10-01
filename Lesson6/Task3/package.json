@@ -6,10 +6,10 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest -w",
-    "copy:html": "cp ./src/index.html ./dist/index.html",
+    
     "build:scripts": "webpack -p",
     "clean": "rm -rf ./dist",
-    "build": "npm-run-all clean && npm run copy:html && npm run build:scripts",
+    "build": "npm run clean  && npm run build:scripts",
     "watch": "webpack -d --devtools eval-source-maps -w"
   },
   "author": "",
