@@ -6,11 +6,11 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest -w",
-    "build:styles": "sass ./src/styles/index.scss ./dist/styles.css",
     "copy:html": "cp ./src/index.html ./dist/index.html",
-    "build:scripts": "babel ./src --out-dir=./dist/",
+    "build:scripts": "webpack -p",
     "clean": "rm -rf ./dist",
-    "build": "npm run clean && npm run build:styles && npm run copy:html && npm run build:scripts"
+    "build": "npm-run-all clean && npm run copy:html && npm run build:scripts",
+    "watch": "webpack -d --devtools eval-source-maps -w"
   },
   "author": "",
   "license": "ISC",
@@ -27,7 +27,7 @@
     "style": "^0.0.3",
     "url": "^0.11.0",
     "webpack": "^4.46.0",
-    "webpack-cli": "^4.8.0"
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {
     "core-js": "^3.18.1"
