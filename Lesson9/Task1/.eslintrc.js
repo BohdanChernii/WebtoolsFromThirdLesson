@@ -4,6 +4,9 @@ module.exports = {
         ecmaVersion: 10,
         sourceType: "module"
     },
+    env:{
+        browser:true,
+    },
     rules: {
         'no-console':2,
     },
