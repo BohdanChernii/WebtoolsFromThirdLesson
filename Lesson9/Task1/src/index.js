@@ -11,5 +11,5 @@ const profile = {
 printProfile(profile);
 const num = 17;
 if (num === 18) {
-  alert('Hi');//eslint-disable-line 
+  alert('Hi');//eslint-disable-line no-alert
 }
