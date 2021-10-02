@@ -1,10 +1,10 @@
-import { renderTasks } from "./renderer.js";
-import { getItem, setItem } from "./storage.js";
-import {  getTasksList, createTask } from './tasksGateway.js';
+import { renderTasks } from './renderer';
+import { getItem, setItem } from './storage';
+import { getTasksList, createTask } from './tasksGateway';
 
 // eslint-disable-next-line consistent-return
 export const onCreateTask = () => {
-  const taskTitleInputElem = document.querySelector(".task-input");
+  const taskTitleInputElem = document.querySelector('.task-input');
 
   const text = taskTitleInputElem.value;
 
@@ -12,8 +12,8 @@ export const onCreateTask = () => {
     return null;
   }
 
-  taskTitleInputElem.value = "";
-  const tasksList = getItem("tasksList") || [];
+  taskTitleInputElem.value = '';
+  const tasksList = getItem('tasksList') || [];
 
   const newTask = {
     text,
@@ -21,14 +21,14 @@ export const onCreateTask = () => {
     createDate: new Date().toISOString(),
     id: (Math.random().toFixed(4) * 10000).toString(),
   };
- createTask(newTask)
-  .then(( ) => getTasksList())
-  .then(newtasksList => {
-    setItem("tasksList",newtasksList)
-    renderTasks();
-  })
-const newtasksList = tasksList.concat()
-  setItem("tasksList", newtasksList);
+  createTask(newTask)
+    .then(() => getTasksList())
+    .then((newtasksList) => {
+      setItem('tasksList', newtasksList);
+      renderTasks();
+    });
+  const newtasksList = tasksList.concat();
+  setItem('tasksList', newtasksList);
 
   renderTasks();
 };
