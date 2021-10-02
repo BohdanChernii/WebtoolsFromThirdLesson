@@ -9,7 +9,9 @@ const profile = {
   company: 'Gromcode',
 };
 printProfile(profile);
+
+console.log(profile);// eslint-disable-line
 const num = 17;
 if (num === 18) {
-  alert('Hi');//eslint-disable-line no-alert
+  alert('Hi');// eslint-disable-line no-alert
 }
