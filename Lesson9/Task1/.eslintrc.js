@@ -1,6 +1,6 @@
 module.exports = {
     extends:'eslint-config-airbnb-base',
-    "rules": {
+    rules: {
         'no-console':2,
     },
     globals: {
